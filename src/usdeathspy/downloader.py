@@ -6,8 +6,7 @@ from pathlib import Path
 
 def download_cdc_data(data_type, year):
     """
-    Downloads and extracts NCHS data. 
-    Prioritizes 7-Zip for Deflate64 support, with PowerShell/Unzip fallbacks.
+    Downloads and extracts NCHS data.
     """
     base_dir = Path(__file__).resolve().parents[2]
     download_dir = base_dir / "data" / data_type / str(year)

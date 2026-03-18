@@ -17,9 +17,7 @@ def load_data(data_type, year):
     if not meta_matches:
         raise FileNotFoundError(f"Metadata missing in {metadata_dir}")
     meta_path = meta_matches[0]
-
-    # --- REFINED FILE SEARCH ---
-    # We ignore files with 'copy' in the name and prioritize files > 10MB
+    
     all_files = [
         f for f in data_dir.rglob("*") 
         if f.is_file() and "copy" not in f.name.lower()

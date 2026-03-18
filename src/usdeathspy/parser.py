@@ -3,7 +3,6 @@ import pandas as pd
 def parse_cdc_data(data_path, meta_path, nrows=None):
     """
     Parses fixed-width CDC data using a metadata map.
-    Ensures codes (like Month) keep their leading zeros.
     """
     # 1. Load the map we built from the PDF/Excel docs
     meta_df = pd.read_csv(meta_path)
